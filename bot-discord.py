@@ -35,6 +35,12 @@ async def meme(ctx):
         picture = discord.File(f)
     # Podemos então enviar esse arquivo como um parâmetro
     await ctx.send(file=picture)
-
+@bot.command()
+async def animals(ctx):
+    with open('animais/memeanimal', 'rb') as f:
+         #Vamos armazenar o arquivo convertido da biblioteca do Discord nesta variável!
+        picture = discord.File(f)
+    # Podemos então enviar esse arquivo como um parâmetro
+    await ctx.send(file=picture)
 
 bot.run("TOKEN")
